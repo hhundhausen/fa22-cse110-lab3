@@ -1,11 +1,23 @@
 /* 
-* Universal Selector: used to create the website's background color 
+* Universal Selector: establish website's background color 
 */ 
 * {
     color:hsl(335, 23%, 78%); 
 }
 
+/* 
+* font implemented 
+*/ 
+@font-face {
+    font-family: 'Roboto Mono'; 
+    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap.woff") format(woff); 
+    font-weight: 700; 
+    font-style: italic; 
+}
 
+/* 
+* Element Selector: structure wesbite header 
+*/ 
 header {
     text-align: center;
     font-family: 'Roboto-Mono', monospace;
@@ -21,13 +33,19 @@ header h2 {
     }
 }
 
-body {
-    background-color: #f8edeb; /* background color */ 
-    font-family: 'Roboto-Mono', monospace; 
-}
-
+/* 
+* Pseudo-class Selector: color to select the items on the header 
+*/ 
 a:active {
     color: #836953;
+}
+
+/* 
+* Element Selector: structure website body 
+*/ 
+body {
+    background-color: #f8edeb;  
+    font-family: 'Roboto-Mono', monospace; 
 }
 
 .menu li {
@@ -35,21 +53,35 @@ a:active {
     background-color: white;  
     max-width: 500px;
     max-height: 200px;
-}
+} 
 
+/* 
+* Element selector: color and layout all header2
+*/ 
 h2 {
-    color: rgb(251, 165, 180); /* red, green, blue values */ 
-    background-color: white; /* background color */ 
+    color: rgb(251, 165, 180); 
+    background-color: white; 
     margin: auto;  
 }
 
-.introduction p {
+/* 
+* attribute selector: defined the background color of id 
+*/ 
+div[id] {
+    background-color: lavender; 
+}
+
+.introduction p{
     background: content-box radial-gradient(#ccd5ae, white); 
     font-size: 1em; 
     margin: 1rem 1rem 1rem 3rem; 
 }
 
-.introduction details {
+/* 
+* Selector List: establish the introduciton details 
+*/
+details, 
+.introduction {
     color: hsl(335, 23%, 78%);
     margin-top: 0; /* margin long */ 
     margin-bottom: 0;  
@@ -58,25 +90,47 @@ h2 {
 }
 
 /* 
+* Selector List: fix the margin for website's intro header 
+*/ 
+h2, 
+.introduction {
+    margin:auto; 
+}
+
+/* 
+* Descendent combinator: changed the shape of unordered list 
+*/
+ul li {
+    list-style-type: circle; 
+}
+
+/* 
 *  Attendance Class Selector 
 */ 
 .Attendees {
-    width: 50vw;  /* absolute unit one */  
+    width: 50vw;   
     height: 50vh; 
-    font-size: 0.9rem; /* relative unit two */ 
+    font-size: 0.9rem; 
     height: 120px;  
     padding-top: 3px; 
     padding-bottom: 2px; 
     padding-left: 2px; 
     padding-right: 3px; 
     text-decoration: underline; 
-} 
+}
 
 /* 
-*  Agenda Class Selector 
+* Child Combinator: changed the background color of attendees
+*/ 
+.Attendees > ol {
+    background-color: white; 
+}
+
+/* 
+*  Class Selector: structured website meeting agenda 
 */ 
 .Agenda {
-    width: 700px;  /* absolute unit two*/  
+    width: 700px;   
     height: 150px; 
     margin : 1% 0 0 1%; 
      
@@ -84,14 +138,13 @@ h2 {
     border-color: #ccd5ae; 
     border-width: 4pt; 
     border-radius: 4pt;  
-}
+} 
 
 /* 
-* Selector list 
+* style properties: change the color of each header3 after header2 
 */ 
-
-.Agenda > li {
-    display: flex; 
+h2 ~ h3 {
+    color: #836953;
 }
 
 /* 
@@ -99,7 +152,7 @@ h2 {
 */ 
 .Unfinished-Business {
     width: 8in;     /* absolute unit three */ 
-    height: 4cm; /* absolute unit four */ 
+    height: 5.5cm; /* absolute unit four */ 
     margin : 1% 1% 1% 1%; 
     border-style: dotted; 
     border-color: #ccd5ae; 
@@ -139,8 +192,14 @@ h2 {
     border-radius: 4pt;
 }
 
+.Questions-Concerns li {
+    color:  #836953;
+    text-decoration: underline; 
+    text-align: left; 
+}
+
 /* 
-*  Class Selector 
+*  Class Selector: structured images 
 */ 
 .images {
     max-width: 50px;
@@ -148,15 +207,18 @@ h2 {
     display: inline;
 }
 
-
-.Questions-Concerns li {
-    color:  #836953;
-    text-decoration: underline; 
-    text-align: left; 
+/* 
+*  Class Selector: structured view of meeting videos 
+*/ 
+.video {
+    margin-bottom: 10px; 
 }
 
+/* 
+* Class Selector: structured display of meeting audio 
+*/ 
 .audio {
-    display: none; /* could change */ 
+    display: none;  
 }
 
 /* 
@@ -166,6 +228,16 @@ h2 {
     height: 110px; 
 }
 
+/* 
+* Adjacent Sibling Combinator: bolded website contact information
+*/  
+h2 + p{
+    font-weight: bold; 
+}
+
+/* 
+* ID Selector: customize flex layout 
+*/ 
 #parent {
     display: flex;
     flex-direction: column-reverse; 
@@ -188,12 +260,15 @@ h2 {
     align-self: center; 
 }
 
-.formTitle h2 {
-    margin-bottom: 0.25in;
+/* 
+* Combining Two Selectors: designed text
+*/ 
+p.help {
+    color: #836953; 
 }
 
 /* 
-*  Class Selector 
+*  Class Selector: structured website's form  
 */ 
 .form2 {
     margin-left: 0.25in; 
@@ -208,7 +283,7 @@ h2 {
 }
 
 /* 
-*  Class Selector 
+*  Class Selector: structured website's form 
 */ 
 .form {
     min-width: 700px;
@@ -233,7 +308,9 @@ h2 {
     font-family: 'Roboto-Mono', monospace;  
 }
 
-/* grid */ 
+/* 
+* grid implemented  
+*/ 
 .gridParent{
   display: grid;
   gap: 10px; 
@@ -255,11 +332,4 @@ h2 {
     background-color: pink; 
     grid-column: second-line / 2; 
     grid-row: second-line / 2; 
-}
-
-@font-face {
-    font-family: 'Roboto Mono'; 
-    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap.woff") format(woff); 
-    font-weight: 700; 
-    font-style: italic; 
 }
