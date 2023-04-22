@@ -41,10 +41,9 @@ a:active {
 }
 
 /* 
-* Element Selector: structure website body 
+* Element Selector: website body font 
 */ 
-body {
-    background-color: #f8edeb;  
+body { 
     font-family: 'Roboto-Mono', monospace; 
 }
 
@@ -265,6 +264,7 @@ h2 + p{
 */ 
 p.help {
     color: #836953; 
+    background-color: hsl(336, 100%, 99%);
 }
 
 /* 
