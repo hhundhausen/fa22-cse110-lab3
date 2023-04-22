@@ -1,0 +1,261 @@
+* {
+    color:hsl(335, 23%, 78%); 
+}
+
+header {
+    text-align: center;
+    font-family: 'Roboto-Mono', monospace;
+}
+
+header h2 {
+    background-color: #f8edeb;
+} 
+
+@media screen and (max-width: 480px) {
+    header h2 {
+        background-color: red; 
+    }
+}
+
+body {
+    background-color: #f8edeb; /* background color */ 
+    font-family: 'Roboto-Mono', monospace; 
+}
+
+a:active {
+    color: #836953;
+}
+
+.menu li {
+    display: inline-block;
+    background-color: white;  
+    max-width: 500px;
+    max-height: 200px;
+}
+
+h2 {
+    color: rgb(251, 165, 180); /* red, green, blue values */ 
+    background-color: white; /* background color */ 
+    margin: auto;  
+}
+
+.introduction p {
+    background: content-box radial-gradient(#ccd5ae, white); 
+    font-size: 1em; 
+    margin: 1rem 1rem 1rem 3rem; 
+}
+
+.introduction details {
+    color: hsl(335, 23%, 78%);
+    margin-top: 0; /* margin long */ 
+    margin-bottom: 0;  
+    margin-left: 2rem; 
+    margin-right: 2rem;  
+}
+
+/* 
+*  Attendance Class Selector 
+*/ 
+.Attendees {
+    width: 50vw;  /* absolute unit one */  
+    height: 50vh; 
+    font-size: 0.9rem; /* relative unit two */ 
+    height: 120px;  
+    padding-top: 3px; 
+    padding-bottom: 2px; 
+    padding-left: 2px; 
+    padding-right: 3px; 
+    text-decoration: underline; 
+} 
+
+/* 
+*  Agenda Class Selector 
+*/ 
+.Agenda {
+    width: 700px;  /* absolute unit two*/  
+    height: 150px; 
+    margin : 1% 0 0 1%; 
+     
+    border-style: dotted; 
+    border-color: #ccd5ae; 
+    border-width: 4pt; 
+    border-radius: 4pt;  
+}
+
+/* 
+* Selector list 
+*/ 
+
+.Agenda > li {
+    display: flex; 
+}
+
+/* 
+*  Class Selector 
+*/ 
+.Unfinished-Business {
+    width: 8in;     /* absolute unit three */ 
+    height: 4cm; /* absolute unit four */ 
+    margin : 1% 1% 1% 1%; 
+    border-style: dotted; 
+    border-color: #ccd5ae; 
+    border-width: 4pt; 
+    border-radius: 4pt; 
+}
+
+/* 
+*  Class Selector 
+*/ 
+.Finished-Business {
+    width: 8in; /* absolute unit three */ 
+    height: 4cm; /* absolute unit four */
+     
+    margin : 1% 1% 1% 1%; 
+    border-style: dotted; 
+    border-color: #ccd5ae;
+    border-width: 4pt; 
+    border-radius: 4pt;  
+}
+
+/* 
+*  Class Selector 
+*/ 
+.Questions-Concerns {
+    width: 40vw; /* relative unit three */ 
+    height: 15vh; /* relatvie unit four */ 
+
+    margin-top: 0.5rem; /* margin long */ 
+    margin-bottom: 0;  
+    margin-left: 0; 
+    margin-right: 0.5rem;
+
+    border-style: dotted; 
+    border-color: #ccd5ae; 
+    border-width: 4pt; 
+    border-radius: 4pt;
+}
+
+/* 
+*  Class Selector 
+*/ 
+.images {
+    max-width: 50px;
+    max-height: 50px;
+    display: inline;
+}
+
+
+.Questions-Concerns li {
+    color:  #836953;
+    text-decoration: underline; 
+    text-align: left; 
+}
+
+.audio {
+    display: none; /* could change */ 
+}
+
+/* 
+*  Class Selector 
+*/ 
+.contacts {
+    height: 110px; 
+}
+
+#parent {
+    display: flex;
+    flex-direction: column-reverse; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.cof {
+    background-color: #836953; 
+    align-self: center; 
+}
+
+.mat {
+    background-color: #efdaf1;
+    align-self: center; 
+}
+
+.lat {
+    background-color:hsl(336, 100%, 99%);
+    align-self: center; 
+}
+
+.formTitle h2 {
+    margin-bottom: 0.25in;
+}
+
+/* 
+*  Class Selector 
+*/ 
+.form2 {
+    margin-left: 0.25in; 
+    background-color: white;
+    padding-top: 5px; 
+    padding-bottom: 4px; 
+    padding-left: 4px; 
+    padding-right: 5px; 
+    border: 3pt solid #ccd5ae;
+    height: 700px;
+    width: 700px;  
+}
+
+/* 
+*  Class Selector 
+*/ 
+.form {
+    min-width: 700px;
+    position: static; 
+}
+
+.subscrube:active {
+    color:hsl(335, 23%, 78%); 
+}
+
+.submit:hover {
+    color: #ccd5ae; 
+}
+
+/* 
+*  Class Selector 
+*/ 
+.foot {
+    position: sticky;
+    bottom:0; 
+    color: pink;
+    font-family: 'Roboto-Mono', monospace;  
+}
+
+/* grid */ 
+.gridParent{
+  display: grid;
+  gap: 10px; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: min-content 1fr max-content; 
+
+}
+
+.one {
+    background-color: white; 
+}
+
+.two { 
+    background-color: lavender; 
+
+}
+
+.three {
+    background-color: pink; 
+    grid-column: second-line / 2; 
+    grid-row: second-line / 2; 
+}
+
+@font-face {
+    font-family: 'Roboto Mono'; 
+    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap.woff") format(woff); 
+    font-weight: 700; 
+    font-style: italic; 
+}
