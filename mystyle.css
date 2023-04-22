@@ -1,6 +1,10 @@
+/* 
+* Universal Selector: used to create the website's background color 
+*/ 
 * {
     color:hsl(335, 23%, 78%); 
 }
+
 
 header {
     text-align: center;
