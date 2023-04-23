@@ -1,5 +1,5 @@
 --- 
-meeting title : <insert team name> Standup Meeting
+meeting title : <insert here>
 date : <month - day - year>
 time : <start time - end time>
 ---
