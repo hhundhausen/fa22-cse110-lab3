@@ -97,6 +97,10 @@ h2,
     margin:auto; 
 }
 
+h1, h2 {
+    background-color:white; 
+}
+
 /* 
 * Descendent combinator: changed the shape of unordered list 
 */
