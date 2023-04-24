@@ -97,14 +97,11 @@ h2,
     margin:auto; /* auto margin */ 
 } 
 
+
 /* Selector List: Multiple elements */ 
 h1, 
 h2 {
     background-color: white;
-}
-
-h1, h2 {
-    background-color:white; 
 }
 
 /* 
