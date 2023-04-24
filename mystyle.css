@@ -2,7 +2,7 @@
 * Universal Selector: establish website's background color 
 */ 
 * {
-    color:hsl(335, 23%, 78%); 
+    color:hsl(335, 23%, 78%); /* applied hue, saturation,  lightness, alpha value colors */ 
 }
 
 /* 
@@ -19,25 +19,25 @@
 * Element Selector: structure wesbite header 
 */ 
 header {
-    text-align: center;
+    text-align: center; /* centered header text */ 
     font-family: 'Roboto-Mono', monospace;
 }
 
 header h2 {
-    background-color: #f8edeb;
+    background-color: #f8edeb; /* applied color hex code */ 
 } 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) { /* responsiveness for multiple devices */ 
     header h2 {
-        background-color: red; 
+        background-color: red; /* applied color name + background color */ 
     }
 }
 
 /* 
 * Pseudo-class Selector: color to select the items on the header 
 */ 
-a:active {
-    color: #836953;
+a:active { /* pseudo-class (one) */ 
+    color: #836953; /* applied color hex code to text */ 
 }
 
 /* 
@@ -48,19 +48,19 @@ body {
 }
 
 .menu li {
-    display: inline-block;
-    background-color: white;  
-    max-width: 500px;
-    max-height: 200px;
+    display: inline-block; /* experimented with display value inline-block */ 
+    background-color: white; /* applied bakcground color */  
+    max-width: 500px; /* absolute length unit (one) & set max-width */ 
+    max-height: 200px; 
 } 
 
 /* 
 * Element selector: color and layout all header2
 */ 
 h2 {
-    color: rgb(251, 165, 180); 
-    background-color: white; 
-    margin: auto;  
+    color: rgb(251, 165, 180); /* applied color red, green, blue, values to text */ 
+    background-color: white; /* applied bakcground color to element */ 
+    margin: auto;   
 }
 
 /* 
@@ -72,8 +72,8 @@ div[id] {
 
 .introduction p{
     background: content-box radial-gradient(#ccd5ae, white); 
-    font-size: 1em; 
-    margin: 1rem 1rem 1rem 3rem; 
+    font-size: 1em; /* relative length unit (one) */ 
+    margin: 1rem 1rem 1rem 3rem; /* relative length unit (two) */ 
 }
 
 /* 
@@ -81,10 +81,11 @@ div[id] {
 */
 details, 
 .introduction {
-    color: hsl(335, 23%, 78%);
-    margin-top: 0; /* margin long */ 
+    color: hsl(335, 23%, 78%); /* applied color to text */ 
+    /* start of margin long */ 
+    margin-top: 0; 
     margin-bottom: 0;  
-    margin-left: 2rem; 
+    margin-left: 2rem;   
     margin-right: 2rem;  
 }
 
@@ -93,11 +94,17 @@ details,
 */ 
 h2, 
 .introduction {
-    margin:auto; 
+    margin:auto; /* auto margin */ 
+} 
+
+/* Selector List: Multiple elements */ 
+h1, 
+h2 {
+    background-color: white;
 }
 
 /* 
-* Descendent combinator: changed the shape of unordered list 
+* Descendent combinator (element element) 
 */
 ul li {
     list-style-type: circle; 
@@ -107,15 +114,18 @@ ul li {
 *  Attendance Class Selector 
 */ 
 .Attendees {
-    width: 50vw;   
-    height: 50vh; 
-    font-size: 0.9rem; 
+    width: 50vw;   /* relative length unit (three) */ 
+    height: 50vh;  /* relative length unit (four)  */ 
+    font-size: 0.9rem;  
     height: 120px;  
-    padding-top: 3px; 
+
+    /* start of padding long */ 
+    padding-top: 3px;     
     padding-bottom: 2px; 
     padding-left: 2px; 
     padding-right: 3px; 
-    text-decoration: underline; 
+
+    text-decoration: underline; /* text-decoration */  
 }
 
 /* 
@@ -126,21 +136,29 @@ ul li {
 }
 
 /* 
+* Child Combinator (element > element)
+*/ 
+ol > li {
+    color: #836953;
+}
+
+
+/* 
 *  Class Selector: structured website meeting agenda 
 */ 
 .Agenda {
-    width: 700px;   
-    height: 150px; 
+    width: 700px;   /* set the width of class  */ 
+    height: 150px;  /* set the height of class */  
     margin : 1% 0 0 1%; 
      
-    border-style: dotted; 
-    border-color: #ccd5ae; 
-    border-width: 4pt; 
-    border-radius: 4pt;  
+    border-style: dotted; /* border style */  
+    border-color: #ccd5ae; /* border color */ 
+    border-width: 4pt; /* border width */ 
+    border-radius: 4pt;  /* border radius */ 
 } 
 
 /* 
-* style properties: change the color of each header3 after header2 
+* General sibling combinator (element ~ element) 
 */ 
 h2 ~ h3 {
     color: #836953;
@@ -150,12 +168,12 @@ h2 ~ h3 {
 *  Class Selector 
 */ 
 .Unfinished-Business {
-    width: 8in;     /* absolute unit three */ 
-    height: 5.5cm; /* absolute unit four */ 
-    margin : 1% 1% 1% 1%; 
+    width: 8in;     /* absolute length unit (two) */ 
+    height: 5.5cm;  /* absolute length unit (three)  */ 
+    margin : 1% 1% 1% 1%; /* margin short */  
     border-style: dotted; 
     border-color: #ccd5ae; 
-    border-width: 4pt; 
+    border-width: 4pt; /* absolute length unit (four) */ 
     border-radius: 4pt; 
 }
 
@@ -163,9 +181,9 @@ h2 ~ h3 {
 *  Class Selector 
 */ 
 .Finished-Business {
-    width: 8in; /* absolute unit three */ 
-    height: 4cm; /* absolute unit four */
-     
+    width: 8in;  
+    height: 4cm; 
+    
     margin : 1% 1% 1% 1%; 
     border-style: dotted; 
     border-color: #ccd5ae;
@@ -177,10 +195,10 @@ h2 ~ h3 {
 *  Class Selector 
 */ 
 .Questions-Concerns {
-    width: 40vw; /* relative unit three */ 
-    height: 15vh; /* relatvie unit four */ 
-
-    margin-top: 0.5rem; /* margin long */ 
+    width: 40vw;
+    height: 15vh; 
+    /* start of margin long (spacing between html elements) */ 
+    margin-top: 0.5rem;  
     margin-bottom: 0;  
     margin-left: 0; 
     margin-right: 0.5rem;
@@ -217,7 +235,7 @@ h2 ~ h3 {
 * Class Selector: structured display of meeting audio 
 */ 
 .audio {
-    display: none;  
+    display: none; /* experimented with disply value none */  
 }
 
 /* 
@@ -228,7 +246,7 @@ h2 ~ h3 {
 }
 
 /* 
-* Adjacent Sibling Combinator: bolded website contact information
+* Adjacent Sibling Combinator (element + element) 
 */  
 h2 + p{
     font-weight: bold; 
@@ -238,15 +256,16 @@ h2 + p{
 * ID Selector: customize flex layout 
 */ 
 #parent {
-    display: flex;
-    flex-direction: column-reverse; 
-    flex-wrap: wrap; 
+    display: flex; /* applied flex to the display property */ 
+    flex-direction: column-reverse; /* flexbox related attribute one */ 
+    flex-wrap: wrap; /* flexbox related attribute two */ 
+    justify-content: space-between; /* flexbox related attribute three */ 
     gap: 10px; 
 }
 
 .cof {
     background-color: #836953; 
-    align-self: center; 
+    align-self: center; /* flexbox related attribute four */ 
 }
 
 .mat {
@@ -260,7 +279,7 @@ h2 + p{
 }
 
 /* 
-* Combining Two Selectors: designed text
+* Combining Two Selectors (element.class) 
 */ 
 p.help {
     color: #836953; 
@@ -273,10 +292,7 @@ p.help {
 .form2 {
     margin-left: 0.25in; 
     background-color: white;
-    padding-top: 5px; 
-    padding-bottom: 4px; 
-    padding-left: 4px; 
-    padding-right: 5px; 
+    padding: 5px 4px 4px 5px; /* padding short */ 
     border: 3pt solid #ccd5ae;
     height: 700px;
     width: 700px;  
@@ -286,15 +302,16 @@ p.help {
 *  Class Selector: structured website's form 
 */ 
 .form {
-    min-width: 700px;
-    position: static; 
+    min-width: 700px; /* set the minimum width of class */ 
+    position: static; /* set position with static value */  
 }
+ 
 
-.subscrube:active {
+.subscrube:active { 
     color:hsl(335, 23%, 78%); 
 }
 
-.submit:hover {
+.submit:hover { /* pseudo-class (two) */ 
     color: #ccd5ae; 
 }
 
@@ -302,7 +319,7 @@ p.help {
 *  Class Selector 
 */ 
 .foot {
-    position: sticky;
+    position: sticky; /* set position with sticky value */ 
     bottom:0; 
     color: pink;
     font-family: 'Roboto-Mono', monospace;  
@@ -312,10 +329,10 @@ p.help {
 * grid implemented  
 */ 
 .gridParent{
-  display: grid;
+  display: grid; /* applied grid to the display property */ 
   gap: 10px; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: min-content 1fr max-content; 
+  grid-template-columns: 1fr 1fr; /* grid related attribute (one) */ 
+  grid-template-rows: min-content 1fr max-content; /* grid related attribute (two) */  
 
 }
 
@@ -330,6 +347,8 @@ p.help {
 
 .three {
     background-color: pink; 
-    grid-column: second-line / 2; 
-    grid-row: second-line / 2; 
+    grid-column-start: 1; /* grid related attribute (three) */ 
+    grid-column-end: 2; 
+    grid-row-start: 3;   
+    grid-row-end: 3;  
 }
